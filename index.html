@@ -2,9 +2,16 @@
 <html>
   <head>
     <title>JavaScript Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
   <body>
+    <label for="nameInput">Name:</label>
+    <input type="text" id="nameInput">
+    <button id="nameBtn">Start</button>
+
+    <h2 id="playerName"></h2>
+    
     <p id="date"></p>
 
     <h3>Level</h3>
@@ -14,6 +21,7 @@
 
     <button id="playBtn">Play</button>
 
+    <h3 id="timer"></h3>
     <h3 id="msg">Select a Level</h3>
     <input type="text" id="guess">
     <button id="guessBtn" disabled>Guess</button>
@@ -29,5 +37,9 @@
       <li name="leaderboard">100</li>
       <li name="leaderboard">100</li>
     </ol>
+
+    <p id="feedback"></p>
+    <p id="avgTimeP">Average Time:</p>
+    <p id="fastest">Fastest Time:</p>
   </body>
 </html>
