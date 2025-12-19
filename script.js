@@ -8,8 +8,25 @@ let totalTime = 0;
 let fastestTime = null;
 let userName = "";
 let timerInterval;
+let developerMode = false;
 
-// event listeners
+document.addEventListener("DOMContentLoaded", function() {
+	const sections = document.querySelectorAll("label, h2, h3, p, input, button, ol");
+	sections.forEach((element, index) => {
+		element.classList.add("fade-in-up");
+		element.classList.add(`delay-${(index % 8) + 1}`);
+	});
+	
+	// Developer mode toggle
+	const devModeToggle = document.getElementById("devModeToggle");
+	if(devModeToggle) {
+		devModeToggle.addEventListener("change", function() {
+			developerMode = this.checked;
+		});
+	}
+});
+
+
 playBtn.addEventListener("click", play);
 guessBtn.addEventListener("click", makeGuess);
 
@@ -54,7 +71,11 @@ function play(){
 
     msg.textContent = "Guess a number from 1-" + level;
     answer = Math.floor(Math.random()*level) + 1;
-    guess.placeholder = answer; // place holder
+    if(developerMode) {
+        guess.placeholder = answer;
+    } else {
+        guess.placeholder = "";
+    }
 }
 
 function makeGuess(){
