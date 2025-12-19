@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	padding:16px;
-	background-color:#f7fafc; /* light neutral background */
+	background-color:#b6d5e9; /* light neutral background */
 	color:#0f172a; /* dark text for readability */
 	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
@@ -24,3 +24,25 @@ body{
 	100%{transform:translateY(110vh) rotate(360deg);opacity:0}
 }
 
+/* Other Games section */
+#otherGames {
+	list-style-type: none;
+	padding: 0;
+	margin: 10px 0;
+}
+
+#otherGames li {
+	margin: 8px 0;
+}
+
+#otherGames a {
+	color: #1a5570;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+#otherGames a:hover {
+	color: #0284c7;
+	text-decoration: underline;
+}

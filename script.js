@@ -141,7 +141,6 @@ function updateScore(){
     avgScore.textContent = "Average score: " + avg.toFixed(2);
 }
 
-/* Confetti: create small colored elements that fall and then clean up */
 function launchConfetti(){
     const colors = ["#f94144","#f3722c","#f8961e","#f9c74f","#90be6d","#43aa8b","#577590"];
     const count = 30;
